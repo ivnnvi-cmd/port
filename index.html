@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Portfolio - Jesign Media</title>
+    <meta name="description" content="Jesign Media - Creative Digital Marketing Portfolio showcasing brand design, social media marketing, and video editing work by Jesryni">
+    <meta name="keywords" content="digital marketing, graphic design, video editing, social media marketing, content creator, portfolio">
+    <meta name="author" content="Jesryni - Jesign Media">
+    <meta name="theme-color" content="#9333EA">
+    <title>Jesign Media - Creative Digital Marketing Portfolio</title>
+    
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="all">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <img src="Yellow.png" alt="Jesign Media Logo" class="nav-logo">
+                <img src="Yellow.png" alt="Jesign Media Logo" class="nav-logo" fetchpriority="high">
             </div>
             <button class="nav-toggle" id="navToggle">
                 <span></span>
@@ -40,14 +50,14 @@
                     <p class="hero-location">Based in Philippines.</p>
                     <p class="hero-description">I am a Creative Marketing Specialist with over 3 years of experience in the creative field, combined with a strong background in Brand Marketing – working with a range of clients from small startups to some established companies.</p>
                     <div class="hero-buttons">
-                        <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                        <a href="#about" class="btn btn-primary">About Me</a>
+                        <a href="#portfolio" class="btn btn-secondary">My Work</a>
                     </div>
                 </div>
             </div>
             <div class="hero-right">
                 <div class="hero-image-container">
-                    <img src="img pic.png" alt="Jesryni" class="hero-profile-img">
+                    <img src="img pic.png" alt="Jesryni" class="hero-profile-img" fetchpriority="high">
                 </div>
             </div>
         </div>
@@ -59,8 +69,7 @@
     <!-- About Me Section -->
     <section id="about" class="about-me">
         <div class="container">
-            <h2 class="section-title">Know More About Me</h2>
-            <p class="section-subtitle">My Education & Work Experience</p>
+            <h2 class="section-title section-title-highlight">Know More About Me</h2>
             
             <div class="about-me-grid">
                 <!-- Education Column -->
@@ -125,7 +134,7 @@
     <!-- Toolbox Section -->
     <section class="toolbox">
         <div class="container">
-            <h2 class="section-title">What's in My Toolbox</h2>
+            <h2 class="section-title section-title-highlight-purple">What's in My Toolbox?</h2>
             <p class="section-subtitle">Key tools and systems I've honed to create, analyze, and drive results.</p>
             
             <div class="toolbox-grid">
@@ -198,7 +207,7 @@
     <!-- Specialization Section -->
     <section class="specialization">
         <div class="container">
-            <h2 class="section-title">My Specializations</h2>
+            <h2 class="section-title section-title-highlight">My Specializations</h2>
             
             <div class="specialization-grid">
                 <div class="specialization-card">
@@ -231,33 +240,30 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <div class="portfolio-header">
-                <img src="Purple.png" alt="Portfolio Logo" class="portfolio-logo">
-                <h2 class="section-title">My Work</h2>
-            </div>
+            <h2 class="section-title section-title-highlight-purple">My Work</h2>
             
             <!-- Filter Buttons -->
             <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="brand-kits">Brand Kits</button>
-                <button class="filter-btn" data-filter="logos">Logos</button>
+                <button class="filter-btn active" data-filter="logos">Logos</button>
+                <button class="filter-btn" data-filter="brand-kits">Brand Kits</button>
                 <button class="filter-btn" data-filter="social-media">Social Media</button>
                 <button class="filter-btn" data-filter="real-estate">Real Estate</button>
-                <button class="filter-btn" data-filter="mockups">Mock-Ups</button>
                 <button class="filter-btn" data-filter="presentations">Presentations</button>
+                <button class="filter-btn" data-filter="mockups">Mock-Ups</button>
             </div>
 
             <!-- Portfolio Grid -->
             <div class="portfolio-grid" id="portfolioGrid">
                 <!-- Brand Kits -->
                 <div class="portfolio-item" data-category="brand-kits">
-                    <img src="PHOTOS/Brand Kits/1.png" alt="Brand Kit">
+                    <img src="PHOTOS/Brand Kits/1.png" alt="Brand Kit" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Brand Kit Design</h3>
                         <p>Complete Brand Identity</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="brand-kits">
-                    <img src="PHOTOS/Brand Kits/2.png" alt="Brand Kit">
+                    <img src="PHOTOS/Brand Kits/2.png" alt="Brand Kit" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Brand Kit Design</h3>
                         <p>Complete Brand Identity</p>
@@ -266,35 +272,35 @@
 
                 <!-- Logos -->
                 <div class="portfolio-item" data-category="logos">
-                    <img src="PHOTOS/Logos/Creake.png" alt="Creake Logo">
+                    <img src="PHOTOS/Logos/Creake.png" alt="Creake Logo" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Creake</h3>
                         <p>Brand Identity</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="logos">
-                    <img src="PHOTOS/Logos/Oh May Gulay! Burger Station.png" alt="Oh May Gulay! Burger Station Logo">
+                    <img src="PHOTOS/Logos/Oh May Gulay! Burger Station.png" alt="Oh May Gulay! Burger Station Logo" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Oh May Gulay! Burger Station</h3>
                         <p>Restaurant Branding</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="logos">
-                    <img src="PHOTOS/Logos/Ry Creatives.png" alt="Ry Creatives Logo">
+                    <img src="PHOTOS/Logos/Ry Creatives.png" alt="Ry Creatives Logo" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Ry Creatives</h3>
                         <p>Creative Agency Logo</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="logos">
-                    <img src="PHOTOS/Logos/Ryni Virtuals.png" alt="Ryni Virtuals Logo">
+                    <img src="PHOTOS/Logos/Ryni Virtuals.png" alt="Ryni Virtuals Logo" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Ryni Virtuals</h3>
                         <p>Virtual Services Brand</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="logos">
-                    <img src="PHOTOS/Logos/Sejin Creatives.png" alt="Sejin Creatives Logo">
+                    <img src="PHOTOS/Logos/Sejin Creatives.png" alt="Sejin Creatives Logo" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Sejin Creatives</h3>
                         <p>Creative Studio</p>
@@ -303,84 +309,84 @@
 
                 <!-- Social Media Posts - Oh May Gulay! -->
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/1.png" alt="Social Media Post">
+                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/1.png" alt="Social Media Post" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Oh May Gulay!</h3>
                         <p>Social Media Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/2.png" alt="Social Media Post">
+                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/2.png" alt="Social Media Post" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Oh May Gulay!</h3>
                         <p>Social Media Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/3.png" alt="Social Media Post">
+                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/3.png" alt="Social Media Post" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Oh May Gulay!</h3>
                         <p>Social Media Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/4.png" alt="Social Media Post">
+                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/4.png" alt="Social Media Post" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Oh May Gulay!</h3>
                         <p>Social Media Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/5.png" alt="Social Media Post">
+                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/5.png" alt="Social Media Post" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Oh May Gulay!</h3>
                         <p>Social Media Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/6.png" alt="Social Media Post">
+                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/6.png" alt="Social Media Post" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Oh May Gulay!</h3>
                         <p>Social Media Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/7.png" alt="Social Media Post">
+                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/7.png" alt="Social Media Post" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Oh May Gulay!</h3>
                         <p>Social Media Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/8.png" alt="Social Media Post">
+                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/8.png" alt="Social Media Post" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Oh May Gulay!</h3>
                         <p>Social Media Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/9.png" alt="Social Media Post">
+                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/9.png" alt="Social Media Post" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Oh May Gulay!</h3>
                         <p>Social Media Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/10.png" alt="Social Media Post">
+                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/10.png" alt="Social Media Post" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Oh May Gulay!</h3>
                         <p>Social Media Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/11.png" alt="Social Media Post">
+                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/11.png" alt="Social Media Post" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Oh May Gulay!</h3>
                         <p>Social Media Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/12.png" alt="Social Media Post">
+                    <img src="PHOTOS/Social Media Posting Samples/Oh May Gulay! Burger Station/12.png" alt="Social Media Post" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Oh May Gulay!</h3>
                         <p>Social Media Campaign</p>
@@ -389,21 +395,21 @@
                 
                 <!-- ClickTok Webinar -->
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/ClickTok Webinar/ClickTok Main Poster.jpg" alt="ClickTok Webinar">
+                    <img src="PHOTOS/Social Media Posting Samples/ClickTok Webinar/ClickTok Main Poster.jpg" alt="ClickTok Webinar" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>ClickTok Webinar</h3>
                         <p>Event Promotion</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/ClickTok Webinar/ClickTok Cover Photo.png" alt="ClickTok Cover">
+                    <img src="PHOTOS/Social Media Posting Samples/ClickTok Webinar/ClickTok Cover Photo.png" alt="ClickTok Cover" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>ClickTok Cover Photo</h3>
                         <p>Social Media Branding</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/ClickTok Webinar/ClickTok Display Photo.png" alt="ClickTok Display">
+                    <img src="PHOTOS/Social Media Posting Samples/ClickTok Webinar/ClickTok Display Photo.png" alt="ClickTok Display" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>ClickTok Display Photo</h3>
                         <p>Profile Picture</p>
@@ -412,14 +418,14 @@
                 
                 <!-- Sejin Creatives Social Media -->
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/Sejin Creatives (Display Photo and Cover Photo Only)/Cover Photo_FB page.png" alt="Sejin Cover">
+                    <img src="PHOTOS/Social Media Posting Samples/Sejin Creatives (Display Photo and Cover Photo Only)/Cover Photo_FB page.png" alt="Sejin Cover" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Sejin Creatives</h3>
                         <p>Facebook Cover Photo</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/Sejin Creatives (Display Photo and Cover Photo Only)/Display Photo_FB page.png" alt="Sejin Display">
+                    <img src="PHOTOS/Social Media Posting Samples/Sejin Creatives (Display Photo and Cover Photo Only)/Display Photo_FB page.png" alt="Sejin Display" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Sejin Creatives</h3>
                         <p>Facebook Display Photo</p>
@@ -428,7 +434,7 @@
                 
                 <!-- Cindy's Sweet Delights -->
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Social Media Posting Samples/Cindys Sweet Delights (Cover Photo Only)/Copy of Add a subheading.png" alt="Cindy's Sweet Delights">
+                    <img src="PHOTOS/Social Media Posting Samples/Cindys Sweet Delights (Cover Photo Only)/Copy of Add a subheading.png" alt="Cindy's Sweet Delights" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Cindy's Sweet Delights</h3>
                         <p>Facebook Cover Photo</p>
@@ -437,70 +443,70 @@
 
                 <!-- Real Estate Projects - Haraya Residences -->
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Haraya Residences/1.png" alt="Haraya Residences">
+                    <img src="PHOTOS/LYONS Realty/Haraya Residences/1.png" alt="Haraya Residences" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Haraya Residences</h3>
                         <p>Real Estate Marketing</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Haraya Residences/2.png" alt="Haraya Residences">
+                    <img src="PHOTOS/LYONS Realty/Haraya Residences/2.png" alt="Haraya Residences" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Haraya Residences</h3>
                         <p>Real Estate Marketing</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Haraya Residences/3.png" alt="Haraya Residences">
+                    <img src="PHOTOS/LYONS Realty/Haraya Residences/3.png" alt="Haraya Residences" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Haraya Residences</h3>
                         <p>Real Estate Marketing</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Haraya Residences/4.png" alt="Haraya Residences">
+                    <img src="PHOTOS/LYONS Realty/Haraya Residences/4.png" alt="Haraya Residences" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Haraya Residences</h3>
                         <p>Real Estate Marketing</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Haraya Residences/5.png" alt="Haraya Residences">
+                    <img src="PHOTOS/LYONS Realty/Haraya Residences/5.png" alt="Haraya Residences" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Haraya Residences</h3>
                         <p>Real Estate Marketing</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Haraya Residences/6.png" alt="Haraya Residences">
+                    <img src="PHOTOS/LYONS Realty/Haraya Residences/6.png" alt="Haraya Residences" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Haraya Residences</h3>
                         <p>Real Estate Marketing</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Haraya Residences/7.png" alt="Haraya Residences">
+                    <img src="PHOTOS/LYONS Realty/Haraya Residences/7.png" alt="Haraya Residences" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Haraya Residences</h3>
                         <p>Real Estate Marketing</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Haraya Residences/8.png" alt="Haraya Residences">
+                    <img src="PHOTOS/LYONS Realty/Haraya Residences/8.png" alt="Haraya Residences" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Haraya Residences</h3>
                         <p>Real Estate Marketing</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Haraya Residences/9.png" alt="Haraya Residences">
+                    <img src="PHOTOS/LYONS Realty/Haraya Residences/9.png" alt="Haraya Residences" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Haraya Residences</h3>
                         <p>Real Estate Marketing</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Haraya Residences/10.png" alt="Haraya Residences">
+                    <img src="PHOTOS/LYONS Realty/Haraya Residences/10.png" alt="Haraya Residences" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Haraya Residences</h3>
                         <p>Real Estate Marketing</p>
@@ -509,70 +515,70 @@
                 
                 <!-- The Columns at Ayala Avenue -->
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/1.png" alt="The Columns at Ayala">
+                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/1.png" alt="The Columns at Ayala" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>The Columns at Ayala</h3>
                         <p>Luxury Property Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/2.png" alt="The Columns at Ayala">
+                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/2.png" alt="The Columns at Ayala" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>The Columns at Ayala</h3>
                         <p>Luxury Property Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/3.png" alt="The Columns at Ayala">
+                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/3.png" alt="The Columns at Ayala" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>The Columns at Ayala</h3>
                         <p>Luxury Property Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/4.png" alt="The Columns at Ayala">
+                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/4.png" alt="The Columns at Ayala" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>The Columns at Ayala</h3>
                         <p>Luxury Property Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/5.png" alt="The Columns at Ayala">
+                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/5.png" alt="The Columns at Ayala" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>The Columns at Ayala</h3>
                         <p>Luxury Property Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/6.png" alt="The Columns at Ayala">
+                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/6.png" alt="The Columns at Ayala" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>The Columns at Ayala</h3>
                         <p>Luxury Property Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/7.png" alt="The Columns at Ayala">
+                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/7.png" alt="The Columns at Ayala" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>The Columns at Ayala</h3>
                         <p>Luxury Property Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/8.png" alt="The Columns at Ayala">
+                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/8.png" alt="The Columns at Ayala" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>The Columns at Ayala</h3>
                         <p>Luxury Property Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/9.png" alt="The Columns at Ayala">
+                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/9.png" alt="The Columns at Ayala" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>The Columns at Ayala</h3>
                         <p>Luxury Property Campaign</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/10.png" alt="The Columns at Ayala">
+                    <img src="PHOTOS/LYONS Realty/The Columns at Ayala Avenue/10.png" alt="The Columns at Ayala" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>The Columns at Ayala</h3>
                         <p>Luxury Property Campaign</p>
@@ -581,63 +587,63 @@
                 
                 <!-- Cityland, Mega Plaza -->
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/1.png" alt="Cityland Mega Plaza">
+                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/1.png" alt="Cityland Mega Plaza" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Cityland, Mega Plaza</h3>
                         <p>Commercial Property</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/2.png" alt="Cityland Mega Plaza">
+                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/2.png" alt="Cityland Mega Plaza" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Cityland, Mega Plaza</h3>
                         <p>Commercial Property</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/3.png" alt="Cityland Mega Plaza">
+                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/3.png" alt="Cityland Mega Plaza" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Cityland, Mega Plaza</h3>
                         <p>Commercial Property</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/4.png" alt="Cityland Mega Plaza">
+                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/4.png" alt="Cityland Mega Plaza" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Cityland, Mega Plaza</h3>
                         <p>Commercial Property</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/5.png" alt="Cityland Mega Plaza">
+                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/5.png" alt="Cityland Mega Plaza" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Cityland, Mega Plaza</h3>
                         <p>Commercial Property</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/6.png" alt="Cityland Mega Plaza">
+                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/6.png" alt="Cityland Mega Plaza" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Cityland, Mega Plaza</h3>
                         <p>Commercial Property</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/7.png" alt="Cityland Mega Plaza">
+                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/7.png" alt="Cityland Mega Plaza" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Cityland, Mega Plaza</h3>
                         <p>Commercial Property</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/8.png" alt="Cityland Mega Plaza">
+                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/8.png" alt="Cityland Mega Plaza" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Cityland, Mega Plaza</h3>
                         <p>Commercial Property</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/9.png" alt="Cityland Mega Plaza">
+                    <img src="PHOTOS/LYONS Realty/Cityland, Mega Plaza/9.png" alt="Cityland Mega Plaza" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Cityland, Mega Plaza</h3>
                         <p>Commercial Property</p>
@@ -646,28 +652,28 @@
                 
                 <!-- Lagundi Farm -->
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Lagundi Farm/1.png" alt="Lagundi Farm">
+                    <img src="PHOTOS/LYONS Realty/Lagundi Farm/1.png" alt="Lagundi Farm" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Lagundi Farm</h3>
                         <p>Property Development</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Lagundi Farm/2.png" alt="Lagundi Farm">
+                    <img src="PHOTOS/LYONS Realty/Lagundi Farm/2.png" alt="Lagundi Farm" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Lagundi Farm</h3>
                         <p>Property Development</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Lagundi Farm/3.png" alt="Lagundi Farm">
+                    <img src="PHOTOS/LYONS Realty/Lagundi Farm/3.png" alt="Lagundi Farm" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Lagundi Farm</h3>
                         <p>Property Development</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/Lagundi Farm/4.png" alt="Lagundi Farm">
+                    <img src="PHOTOS/LYONS Realty/Lagundi Farm/4.png" alt="Lagundi Farm" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Lagundi Farm</h3>
                         <p>Property Development</p>
@@ -676,7 +682,7 @@
                 
                 <!-- BGC History -->
                 <div class="portfolio-item" data-category="real-estate">
-                    <img src="PHOTOS/LYONS Realty/History of BGC.png" alt="History of BGC">
+                    <img src="PHOTOS/LYONS Realty/History of BGC.png" alt="History of BGC" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>History of BGC</h3>
                         <p>Educational Infographic</p>
@@ -685,56 +691,56 @@
 
                 <!-- Mock-Ups -->
                 <div class="portfolio-item" data-category="mockups">
-                    <img src="PHOTOS/Mock-Ups/1.png" alt="Mock-Up Design">
+                    <img src="PHOTOS/Mock-Ups/1.png" alt="Mock-Up Design" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Brand Mock-Up</h3>
                         <p>Product Presentation</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="mockups">
-                    <img src="PHOTOS/Mock-Ups/2.png" alt="Mock-Up Design">
+                    <img src="PHOTOS/Mock-Ups/2.png" alt="Mock-Up Design" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Brand Mock-Up</h3>
                         <p>Product Presentation</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="mockups">
-                    <img src="PHOTOS/Mock-Ups/3.png" alt="Mock-Up Design">
+                    <img src="PHOTOS/Mock-Ups/3.png" alt="Mock-Up Design" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Brand Mock-Up</h3>
                         <p>Product Presentation</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="mockups">
-                    <img src="PHOTOS/Mock-Ups/4.png" alt="Mock-Up Design">
+                    <img src="PHOTOS/Mock-Ups/4.png" alt="Mock-Up Design" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Brand Mock-Up</h3>
                         <p>Product Presentation</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="mockups">
-                    <img src="PHOTOS/Mock-Ups/5.png" alt="Mock-Up Design">
+                    <img src="PHOTOS/Mock-Ups/5.png" alt="Mock-Up Design" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Brand Mock-Up</h3>
                         <p>Product Presentation</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="mockups">
-                    <img src="PHOTOS/Mock-Ups/6.png" alt="Mock-Up Design">
+                    <img src="PHOTOS/Mock-Ups/6.png" alt="Mock-Up Design" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Brand Mock-Up</h3>
                         <p>Product Presentation</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="mockups">
-                    <img src="PHOTOS/Mock-Ups/7.png" alt="Mock-Up Design">
+                    <img src="PHOTOS/Mock-Ups/7.png" alt="Mock-Up Design" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Brand Mock-Up</h3>
                         <p>Product Presentation</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="mockups">
-                    <img src="PHOTOS/Mock-Ups/9.png" alt="Mock-Up Design">
+                    <img src="PHOTOS/Mock-Ups/9.png" alt="Mock-Up Design" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Brand Mock-Up</h3>
                         <p>Product Presentation</p>
@@ -743,56 +749,56 @@
 
                 <!-- Class Pubmats -->
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Class Pubmats/1.png" alt="Class Publication">
+                    <img src="PHOTOS/Class Pubmats/1.png" alt="Class Publication" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Educational Material</h3>
                         <p>Class Publications</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Class Pubmats/2.jpg" alt="Class Publication">
+                    <img src="PHOTOS/Class Pubmats/2.jpg" alt="Class Publication" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Educational Material</h3>
                         <p>Class Publications</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Class Pubmats/3.jpg" alt="Class Publication">
+                    <img src="PHOTOS/Class Pubmats/3.jpg" alt="Class Publication" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Educational Material</h3>
                         <p>Class Publications</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Class Pubmats/4.jpg" alt="Class Publication">
+                    <img src="PHOTOS/Class Pubmats/4.jpg" alt="Class Publication" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Educational Material</h3>
                         <p>Class Publications</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Class Pubmats/5.jpg" alt="Class Publication">
+                    <img src="PHOTOS/Class Pubmats/5.jpg" alt="Class Publication" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Educational Material</h3>
                         <p>Class Publications</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Class Pubmats/6.jpg" alt="Class Publication">
+                    <img src="PHOTOS/Class Pubmats/6.jpg" alt="Class Publication" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Educational Material</h3>
                         <p>Class Publications</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Class Pubmats/7.jpg" alt="Class Publication">
+                    <img src="PHOTOS/Class Pubmats/7.jpg" alt="Class Publication" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Educational Material</h3>
                         <p>Class Publications</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="social-media">
-                    <img src="PHOTOS/Class Pubmats/8.jpg" alt="Class Publication">
+                    <img src="PHOTOS/Class Pubmats/8.jpg" alt="Class Publication" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Educational Material</h3>
                         <p>Class Publications</p>
@@ -867,57 +873,84 @@
     <!-- Videos Section -->
     <section id="videos" class="videos">
         <div class="container">
-            <h2 class="section-title">Video Productions</h2>
-            <p class="section-subtitle">My creative video editing and production work</p>
+            <h2 class="section-title section-title-highlight">Video Productions</h2>
             
             <div class="videos-grid">
-                <div class="video-item">
-                    <video controls preload="metadata">
-                        <source src="VIDEOS/Jesign Media_Edited Video 1.mp4#t=0.5" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="video-item" data-video="VIDEOS/Jesign Media_Edited Video 1.mp4">
+                    <div class="video-thumbnail">
+                        <video preload="none" poster="">
+                            <source src="VIDEOS/Jesign Media_Edited Video 1.mp4#t=0.5" type="video/mp4">
+                        </video>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
                     <h3>Video Project 1</h3>
                 </div>
-                <div class="video-item">
-                    <video controls preload="metadata">
-                        <source src="VIDEOS/Jesign Media_Edited Video 2.mp4#t=0.5" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="video-item" data-video="VIDEOS/Jesign Media_Edited Video 2.mp4">
+                    <div class="video-thumbnail">
+                        <video preload="none" poster="">
+                            <source src="VIDEOS/Jesign Media_Edited Video 2.mp4#t=0.5" type="video/mp4">
+                        </video>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
                     <h3>Video Project 2</h3>
                 </div>
-                <div class="video-item">
-                    <video controls preload="metadata">
-                        <source src="VIDEOS/Jesign Media_Edited Video 3.mp4#t=0.5" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="video-item" data-video="VIDEOS/Jesign Media_Edited Video 3.mp4">
+                    <div class="video-thumbnail">
+                        <video preload="none" poster="">
+                            <source src="VIDEOS/Jesign Media_Edited Video 3.mp4#t=0.5" type="video/mp4">
+                        </video>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
                     <h3>Video Project 3</h3>
                 </div>
-                <div class="video-item">
-                    <video controls preload="metadata">
-                        <source src="VIDEOS/Jesign Media_Edited Video 4.mp4#t=0.5" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="video-item" data-video="VIDEOS/Jesign Media_Edited Video 4.mp4">
+                    <div class="video-thumbnail">
+                        <video preload="none" poster="">
+                            <source src="VIDEOS/Jesign Media_Edited Video 4.mp4#t=0.5" type="video/mp4">
+                        </video>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
                     <h3>Video Project 4</h3>
                 </div>
-                <div class="video-item">
-                    <video controls preload="metadata">
-                        <source src="VIDEOS/Jesign Media_Edited Video 5.mp4#t=0.5" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="video-item" data-video="VIDEOS/Jesign Media_Edited Video 5.mp4">
+                    <div class="video-thumbnail">
+                        <video preload="none" poster="">
+                            <source src="VIDEOS/Jesign Media_Edited Video 5.mp4#t=0.5" type="video/mp4">
+                        </video>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
                     <h3>Video Project 5</h3>
                 </div>
-                <div class="video-item">
-                    <video controls preload="metadata">
-                        <source src="VIDEOS/Jesign Media_Edited Video 6.mp4#t=0.5" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="video-item" data-video="VIDEOS/Jesign Media_Edited Video 6.mp4">
+                    <div class="video-thumbnail">
+                        <video preload="none" poster="">
+                            <source src="VIDEOS/Jesign Media_Edited Video 6.mp4#t=0.5" type="video/mp4">
+                        </video>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
                     <h3>Video Project 6</h3>
                 </div>
-                <div class="video-item">
-                    <video controls preload="metadata">
-                        <source src="VIDEOS/Jesign Media_Edited Video 7.mp4#t=0.5" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="video-item" data-video="VIDEOS/Jesign Media_Edited Video 7.mp4">
+                    <div class="video-thumbnail">
+                        <video preload="none" poster="">
+                            <source src="VIDEOS/Jesign Media_Edited Video 7.mp4#t=0.5" type="video/mp4">
+                        </video>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
                     <h3>Video Project 7</h3>
                 </div>
             </div>
@@ -962,11 +995,13 @@
                     </div>
                 </div>
                 
-                <form class="contact-form" id="contactForm" action="https://formsubmit.co/jesignnnnnnnmedia@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_autoresponse" value="Thank you for reaching out! I've received your message and will get back to you as soon as possible. - Jesryni (Jesign Media)">
+                <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <!-- Netlify Forms Configuration -->
+                    <input type="hidden" name="form-name" value="contact">
+                    <!-- Hidden field for spam protection -->
+                    <p style="display: none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                    </p>
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
                     </div>
@@ -976,7 +1011,7 @@
                     <div class="form-group">
                         <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
                 </form>
             </div>
         </div>
@@ -992,7 +1027,7 @@
     <!-- Lightbox Modal -->
     <div class="lightbox" id="lightbox">
         <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightboxImg" alt="Portfolio item">
+        <img class="lightbox-content" id="lightboxImg" alt="Portfolio item" loading="lazy">
         <div class="lightbox-caption" id="lightboxCaption"></div>
         <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&lsaquo;</button>
         <button class="lightbox-nav lightbox-next" id="lightboxNext">&rsaquo;</button>
@@ -1012,9 +1047,27 @@
         <button class="lightbox-nav lightbox-next" id="pdfViewerNext">&rsaquo;</button>
     </div>
 
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <span class="video-modal-close">&times;</span>
+        <button class="video-nav video-prev" id="videoPrev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="video-nav video-next" id="videoNext">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="video-modal-content">
+            <video id="modalVideo" controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 

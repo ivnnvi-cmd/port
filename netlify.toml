@@ -1,22 +1,35 @@
-# Netlify Configuration - Optimized for Speed
+# Netlify Configuration - Optimized for Speed & Bandwidth
 
-# Image & Asset Optimization
-[[plugins]]
-  package = "@netlify/plugin-image-optim"
+[build]
+  publish = "."
 
 [build.processing]
   skip_processing = false
+  
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
 
 [build.processing.images]
   compress = true
 
-# Security Headers
+# Security Headers & Compression
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
+    # Enable Brotli compression (Netlify handles this automatically)
+    # Enable HTTP/2 Server Push for critical assets
+    Link = "</styles.css>; rel=preload; as=style, </script.js>; rel=preload; as=script"
 
 # Aggressive caching for images (1 year)
 [[headers]]

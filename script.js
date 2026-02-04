@@ -182,28 +182,43 @@ document.addEventListener('keydown', (e) => {
 
 // ===== Contact Form Handling =====
 const contactForm = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
 
-// Check if form is Netlify-enabled
-if (contactForm.hasAttribute('data-netlify')) {
-    // Netlify will handle the form submission
-    contactForm.addEventListener('submit', (e) => {
-        // Let Netlify handle it, but show a friendly message
-        const name = document.getElementById('name').value;
-        setTimeout(() => {
-            alert(`Thank you, ${name}! Your message has been sent successfully.`);
-        }, 100);
-    });
-} else {
-    // Fallback for local testing
-    contactForm.addEventListener('submit', (e) => {
+// Handle form submission with Netlify Forms
+if (contactForm && submitBtn) {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        // Show loading state
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
         
-        alert(`Thank you, ${name}! Your message has been received. We'll get back to you at ${email} soon.`);
-        contactForm.reset();
+        try {
+            const formData = new FormData(contactForm);
+            
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            });
+            
+            if (response.ok) {
+                // Success - show message and reset form
+                alert('Thank you! Your message has been sent successfully. I will get back to you soon!');
+                contactForm.reset();
+            } else {
+                // Error from server
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            // Network error or other issue
+            alert('Oops! There was a problem sending your message. Please try again or email me directly at jesignnnnnnnmedia@gmail.com');
+            console.error('Form submission error:', error);
+        } finally {
+            // Reset button state
+            submitBtn.textContent = 'Send Message';
+            submitBtn.disabled = false;
+        }
     });
 }
 
@@ -389,4 +404,135 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-console.log('Jesign Media Portfolio - Loaded Successfully! 🎨');
+// ===== Video Modal =====
+const videoItems = document.querySelectorAll('.video-item');
+const videoModal = document.getElementById('videoModal');
+const modalVideo = document.getElementById('modalVideo');
+const videoModalClose = document.querySelector('.video-modal-close');
+const videoPrev = document.getElementById('videoPrev');
+const videoNext = document.getElementById('videoNext');
+let currentVideoIndex = 0;
+
+// Lazy load video thumbnails using Intersection Observer
+const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const video = entry.target;
+            if (video.dataset.src) {
+                video.src = video.dataset.src;
+                video.load();
+                delete video.dataset.src;
+            }
+            videoObserver.unobserve(video);
+        }
+    });
+}, {
+    rootMargin: '50px'
+});
+
+// Set up lazy loading for video thumbnails
+document.querySelectorAll('.video-thumbnail video').forEach(video => {
+    const source = video.querySelector('source');
+    if (source && source.src) {
+        video.dataset.src = source.src;
+        source.removeAttribute('src');
+    }
+    videoObserver.observe(video);
+});
+
+function openVideoModal(index) {
+    currentVideoIndex = index;
+    const videoSrc = videoItems[currentVideoIndex].getAttribute('data-video');
+    modalVideo.querySelector('source').src = videoSrc;
+    modalVideo.load();
+    videoModal.classList.add('active');
+    
+    // Request fullscreen
+    setTimeout(() => {
+        if (modalVideo.requestFullscreen) {
+            modalVideo.requestFullscreen();
+        } else if (modalVideo.webkitRequestFullscreen) {
+            modalVideo.webkitRequestFullscreen();
+        } else if (modalVideo.msRequestFullscreen) {
+            modalVideo.msRequestFullscreen();
+        }
+    }, 100);
+}
+
+function closeVideoModal() {
+    videoModal.classList.remove('active');
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+    
+    // Exit fullscreen if active
+    if (document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+}
+
+function showNextVideo() {
+    currentVideoIndex = (currentVideoIndex + 1) % videoItems.length;
+    openVideoModal(currentVideoIndex);
+}
+
+function showPrevVideo() {
+    currentVideoIndex = (currentVideoIndex - 1 + videoItems.length) % videoItems.length;
+    openVideoModal(currentVideoIndex);
+}
+
+videoItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        openVideoModal(index);
+    });
+});
+
+videoModalClose.addEventListener('click', closeVideoModal);
+
+videoPrev.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showPrevVideo();
+});
+
+videoNext.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showNextVideo();
+});
+
+// Close video modal when clicking outside
+videoModal.addEventListener('click', (e) => {
+    if (e.target === videoModal) {
+        closeVideoModal();
+    }
+});
+
+// Close video modal with Escape key and navigate with arrow keys
+document.addEventListener('keydown', (e) => {
+    if (videoModal.classList.contains('active')) {
+        if (e.key === 'Escape') {
+            closeVideoModal();
+        } else if (e.key === 'ArrowRight') {
+            showNextVideo();
+        } else if (e.key === 'ArrowLeft') {
+            showPrevVideo();
+        }
+    }
+});
+
+// ===== Register Service Worker for offline support =====
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then(() => {
+                // Service Worker registered successfully
+            })
+            .catch(() => {
+                // Service Worker registration failed
+            });
+    });
+}
