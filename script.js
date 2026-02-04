@@ -340,7 +340,11 @@ function openPDFViewer(item) {
     const overlay = item.querySelector('.portfolio-overlay');
     const title = overlay.querySelector('h3').textContent;
     
-    pdfViewerFrame.src = pdfPath;
+    // Use PDF.js viewer for better compatibility with Git LFS on Netlify
+    // PDF.js can handle cross-origin and large files better than native iframe
+    const viewerUrl = `https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(window.location.origin + '/' + pdfPath)}`;
+    
+    pdfViewerFrame.src = viewerUrl;
     pdfViewerTitle.textContent = title;
     pdfViewerLink.href = pdfPath;
     pdfViewer.classList.add('active');
@@ -386,7 +390,10 @@ function navigatePDF(direction) {
     const overlay = currentItem.querySelector('.portfolio-overlay');
     const title = overlay.querySelector('h3').textContent;
     
-    pdfViewerFrame.src = pdfPath;
+    // Use PDF.js viewer for better compatibility
+    const viewerUrl = `https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(window.location.origin + '/' + pdfPath)}`;
+    
+    pdfViewerFrame.src = viewerUrl;
     pdfViewerTitle.textContent = title;
     pdfViewerLink.href = pdfPath;
 }

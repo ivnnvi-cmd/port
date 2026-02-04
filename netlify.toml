@@ -3,6 +3,10 @@
 [build]
   publish = "."
 
+# Enable Git LFS support
+[build.environment]
+  GIT_LFS_ENABLED = "true"
+
 [build.processing]
   skip_processing = false
   
@@ -67,11 +71,15 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
     Content-Type = "application/pdf"
+    Content-Disposition = "inline"
     X-Frame-Options = "SAMEORIGIN"
+    Access-Control-Allow-Origin = "*"
 
 [[headers]]
   for = "/PHOTOS/Presentations/*/*.pdf"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
     Content-Type = "application/pdf"
+    Content-Disposition = "inline"
     X-Frame-Options = "SAMEORIGIN"
+    Access-Control-Allow-Origin = "*"
