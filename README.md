@@ -1,6 +1,6 @@
 # 🎨 Jesign Portfolio
 
-> Creative Digital Marketing Portfolio by Ivan and Jesryni Pantino
+> Creative Digital Marketing Portfolio by Ivan and Jesryni Pantino-Lagura
 
 **Jesign/NAVIN Media and Tech ltd.**
 
